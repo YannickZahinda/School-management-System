@@ -1,0 +1,45 @@
+<div class="main">
+    <header>
+        <div class="navbar bg-dark text-light">
+          <div class="navbar-brand text-light">
+            www.caleblico@gmail.com
+          </div>
+          <div>+243 998 239 445</div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">SCHOLARLY</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Mail us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href=""><%= link_to 'Students', students_path, class: "nav-link"%></a>
+                  </li>
+                </ul>
+                <button class="btn btn-outline-success" type="submit">Sign up</button>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <div class="p-5" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqSHJBrqQZoLWj0aH9ENkoH2X00Yk0ABUl_g&usqp=CAU'); height: 500px; background-size: cover;">
+        <p class="text-light">The best School of DRC</p>
+        <p class="h1 text-light">Lico University</p>
+        <%= link_to "Register a student", new_student_path(), class: 'btn btn-light text-dark' %>
+      </div>
+    </main>
+</div>

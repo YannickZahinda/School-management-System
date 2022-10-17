@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="row row-col-2 m-2">
+        <div class="card col" id="<%= dom_id student %>" style="width: 18rem;">
+        <div class="d-flex">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfj6DaaDeJS2t3axtESFKmDxq_IgbVFCwpzg&usqp=CAU" style="width:150px; height:150px; border-radius:50%" class="card-img-top m-3" alt="...">
+        <p class="h3">Year 3</p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"><%=student.name%></h5>
+            <p class="card-text">Student story</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Name: <%=student.name%></li>
+            <li class="list-group-item">Age: <%=student.age%></li>
+            <li class="list-group-item">Previous school: <%=student.Previous_school%></li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link"><%= link_to "Student details", student %></a>
+        </div>
+        </div>
+    </div>
+
+</div>

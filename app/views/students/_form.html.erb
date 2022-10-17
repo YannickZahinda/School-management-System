@@ -1,0 +1,35 @@
+<section class="border warning">
+  <h3 class="m-4"> Add Student</h3>
+  <%= form_with(model: student) do |form| %>
+    <% if student.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+        <ul>
+          <% student.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="m-4">
+      <%= form.label :Name, class:"form-label" %><br>
+      <%= form.text_field :name, class: 'form-control', require: true %>
+    </div>
+    <div class="m-4">
+      <%= form.label :Age, class:"form-label" %><br>
+      <%= form.number_field :Age, class: 'form-control', require: true %>
+    </div>
+
+    <div class="m-4">
+      <%= form.label :Previous_school, class:"form-label" %><br>
+      <%= form.text_field :Previous_school, class: 'form-control', require: true %>
+    </div>
+
+    <div class="btn bg-light">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</section>
+
+

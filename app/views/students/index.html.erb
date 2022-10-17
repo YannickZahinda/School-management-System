@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="text-center"><h1 class="text-center">Students</h1></div>
+
+<div>
+<%= link_to "New student", new_student_path, class: 'btn btn-secondary w-30' %>
+<%= link_to "Back home", home_index_path, class: 'btn btn-secondary w-30' %>
+  <% @students.each do |student| %>
+    <%= render student %>
+  <% end %>
+</div>
+
+<div class="text-center "><%= link_to "New student", new_student_path, class: 'btn btn-secondary w-30' %></div>
