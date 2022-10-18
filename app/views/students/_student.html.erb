@@ -1,11 +1,9 @@
-
-<div class="row row-cols-2 gap-3" id="<%= dom_id student %>">
-    <div class="card col" style="width: 18rem;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfj6DaaDeJS2t3axtESFKmDxq_IgbVFCwpzg&usqp=CAU" class="card-img-top w-100 h-100 rounded-5 mt-2" alt="student-pic">
-        <div class="card-body">
-            <h5 class="card-title"><%=student.name%></h5>
-            <p class="card-text">Some quick example text or story to build on the card title about the student.</p>
-            <a href="#"><%= link_to "Student details", student, class: "btn btn-primary" %></a>
-        </div>
+<div class="card col" style="width: 18rem;" id="<%= dom_id student %>">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfj6DaaDeJS2t3axtESFKmDxq_IgbVFCwpzg&usqp=CAU" class="card-img-top w-100 h-100 rounded-5 mt-2" alt="student-pic">
+    <div class="card-body">
+        <h5 class="card-title"><%=student.name%></h5>
+        <p class="card-text">Some quick example text or story to build on the card title about the student.</p>
+        <a href="#"><%= link_to "Student details", student, class: "btn btn-primary" %></a>
     </div>
 </div>
+
