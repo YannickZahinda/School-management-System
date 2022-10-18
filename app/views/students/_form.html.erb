@@ -17,17 +17,17 @@
       <%= form.text_field :name, class: 'form-control', require: true %>
     </div>
     <div class="m-4">
-      <%= form.label :Age, class:"form-label" %><br>
-      <%= form.number_field :Age, class: 'form-control', require: true %>
+      <%= form.label :age, class:"form-label" %><br>
+      <%= form.number_field :age, class: 'form-control', require: true %>
     </div>
 
     <div class="m-4">
-      <%= form.label :Previous_school, class:"form-label" %><br>
-      <%= form.text_field :Previous_school, class: 'form-control', require: true %>
+      <%= form.label :previous_school, class:"form-label" %><br>
+      <%= form.text_field :previous_school, class: 'form-control', require: true %>
     </div>
 
-    <div class="btn bg-light">
-      <%= form.submit %>
+    <div class="text-center">
+      <%= form.submit "APPLY", class: "btn bg-secondary text-light w-50 m-2" %>
     </div>
   <% end %>
 </section>

@@ -1,10 +1,16 @@
 <div class="main">
     <header>
         <div class="navbar bg-dark text-light">
-          <div class="navbar-brand text-light">
-            www.caleblico@gmail.com
+          <div class="navbar-brand text-light fs-6 p-1">
+            <em>email us: www.caleblico@gmail.com</em>
           </div>
-          <div>+243 998 239 445</div>
+          <div>
+          <% if user_signed_in? %>
+          <div class="p-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSLU5_eUUGBfxfxRd4IquPiEwLbt4E_6RYMw&usqp=CAU" class="user-image" alt="user-pic"> <strong style="list-style-type: none;"> You're signed in as : <%= current_user.email %></strong>
+          </div>
+          <% end %>
+          </div>
         </div>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -14,32 +20,40 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
+                  <% if user_signed_in?%>
+                    <li class="nav-item">
+                      <%= link_to "Dashboard", dashboard_path, class: "nav-link active"%>
+                    </li>
+                  <% end %>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Courses</a>
+                    <a href="#"><%= link_to "Teachers", teachers_path, class: "nav-link"%></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Mail us</a>
+                    <a class="nav-link" href = "mailto:caleblico@gmail.com?subject = Feedback&body = Message">Mail us</a>
                   </li>
                   <li class="nav-item">
                     <a href=""><%= link_to 'Students', students_path, class: "nav-link"%></a>
                   </li>
                 </ul>
-                <button class="btn btn-outline-success" type="submit">Sign up</button>
+                <% if user_signed_in? %>
+                  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: "nav-link btn btn-outline-success m-2 p-2"%>
+                  <%= link_to 'Edit profile', edit_user_registration_path, class: "nav-link btn btn-outline-success m-2 p-2"%>
+                <% else %>
+                  <%= link_to 'Sign up', new_user_registration_path, class: "nav-link btn btn-outline-success m-2 p-2"%>
+                  <%= link_to 'Sign in', new_user_session_path, class: "nav-link btn btn-outline-success m-2 p-2"%>
+                <% end %>
               </div>
             </div>
           </nav>
     </header>
     <main>
-      <div class="p-5" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqSHJBrqQZoLWj0aH9ENkoH2X00Yk0ABUl_g&usqp=CAU'); height: 500px; background-size: cover;">
-        <p class="text-light">The best School of DRC</p>
-        <p class="h1 text-light">Lico University</p>
-        <%= link_to "Register a student", new_student_path(), class: 'btn btn-light text-dark' %>
+      <div class="p-5" style="background-image: url('https://www.timeplan.com/wp-content/uploads/2018/12/teacher-whiteboard.jpg'); height: 500px; background-size: cover;">
+        <p class="text-dark">Meet one of the best school in DRC</p>
+        <p class="h1 text-dark">Choose the righ theme <br> for education</p>
+        <%= link_to "Apply as student", new_student_path(), class: 'btn btn-secondary text-light outline-light p-3' %>
       </div>
     </main>
 </div>

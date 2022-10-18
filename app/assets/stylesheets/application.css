@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+.user-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}
+
+@media only screen and (max-width: 992) {
+    .students{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+}

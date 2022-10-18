@@ -1,13 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="text-center"><h1 class="text-center">Students</h1></div>
-
-<div>
-<%= link_to "New student", new_student_path, class: 'btn btn-secondary w-30' %>
-<%= link_to "Back home", home_index_path, class: 'btn btn-secondary w-30' %>
-  <% @students.each do |student| %>
-    <%= render student %>
-  <% end %>
+<div class="container-fluid">
+  <h2 class="text-center container bg-secondary rounded-2 mt-3 p-3 text-light">Students</h2>
+  <%= link_to "<< back home", home_index_path, class: '' %>
+  <div class="container text-center ">
+    <div class="row row-cols-3 gap-3 students">
+      <% @students.each do |student| %>
+        <%= render student %>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<div class="text-center "><%= link_to "New student", new_student_path, class: 'btn btn-secondary w-30' %></div>

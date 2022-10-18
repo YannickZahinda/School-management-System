@@ -1,0 +1,5 @@
+<%= link_to "<<back home", home_index_path, class: '' %>
+<div class="container bg-secondary p-3 rounded-3">
+    <h2 class="text-light">Your are logged in as <%= current_user.email%></h2>
+    <%= link_to 'Edit profile', edit_user_registration_path, class: "nav-link btn btn-light fs-3 m-2 p-2"%>
+</div>
