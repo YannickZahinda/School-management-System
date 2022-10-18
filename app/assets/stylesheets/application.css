@@ -19,6 +19,17 @@
     border-radius: 50%
 }
 
+.emoji{
+    width: 32px;
+    height: 32px;
+    background-color: rgb(29, 110, 181);
+}
+.emoj{
+    width: 45px;
+    height: 35px;
+    border-radius: 50%;
+}
+
 @media only screen and (max-width: 992) {
     .students{
         display: flex;

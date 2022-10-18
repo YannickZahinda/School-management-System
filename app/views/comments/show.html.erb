@@ -1,0 +1,15 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <%= render @comment %>
+  <div class="border-1">
+    <h1><%= @comment.name%></h1>
+    <p><%= @comment.description%></p>
+
+    <div>
+      <%= link_to "Edit this comment", edit_comment_path(@comment) %> |
+      <%= link_to "Back to comments", comments_path %>
+
+      <%= button_to "Destroy this comment", @comment, method: :delete %>
+    </div>
+  </div>
+</div>
