@@ -1,24 +1,19 @@
-# README
+## School management System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a web site of school management system, the user can apply as student, see thenumber of available students and comment on a post
 
-Things you may want to cover:
+## Build with
 
-* Ruby version
+> `Language`: Ruby
+> `Framework`: Ruby On Rails
 
-* System dependencies
+## Live Demo
+[see the site in live](https://school-management0511.herokuapp.com/)
 
-* Configuration
+## Run the application
 
-* Database creation
+`git clone`: `https://github.com/YannickZahinda/School-management-System`
 
-* Database initialization
+## Yannick Zahinda
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[LinkedIn](https://www.linkedin.com/in/yannickmulikuza/)
